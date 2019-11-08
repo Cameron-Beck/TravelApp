@@ -35,9 +35,8 @@ class Country
   def self.all()
     sql = "SELECT * FROM country"
     country_data = SqlRunner.run(sql)
-    students = map_items(country_data)
-    return students
+    countries = map_items(country_data)
+    return countries
   end
-
 
 end

@@ -14,17 +14,13 @@ class City
 
 
   def save()
-    sql = "INSERT INTO city
-    (
-      name ,
+    sql = "INSERT INTO city(
+      name,
       visited,
-      country_id
-    )
-    VALUES
-    (
-      $1, $2, $3
-    )
-    RETURNING id"
+      country_id)
+      VALUES(
+      $1, $2, $3)
+      RETURNING id"
     values = [@name, @visited, @country_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
@@ -33,6 +29,20 @@ class City
   def self.delete_all()
     sql = "DELETE FROM city"
     SqlRunner.run( sql )
+  end
+
+  def delete()
+  sql = "DELETE FROM city
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM city"
+    city_data = SqlRunner.run(sql)
+    cities = map_items(city_data)
+    return cities
   end
 
 end
