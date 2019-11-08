@@ -32,13 +32,12 @@ class Country
   SqlRunner.run(sql, values)
   end
 
-  # def self.all()
-  #   sql = "SELECT * FROM students"
-  #   student_data = SqlRunner.run(sql)
-  #   students = map_items(student_data)
-  #   return students
-  # end
-
+  def self.all()
+    sql = "SELECT * FROM country"
+    country_data = SqlRunner.run(sql)
+    students = map_items(country_data)
+    return students
+  end
 
 
 end
