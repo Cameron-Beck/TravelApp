@@ -24,3 +24,5 @@ CREATE TABLE country (
   name VARCHAR(255),
   visited BOOLEAN
 )
+
+///fsdfdfsfds
