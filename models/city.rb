@@ -26,4 +26,5 @@ class City
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
+  
 end
