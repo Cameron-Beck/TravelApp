@@ -28,4 +28,12 @@ country2 = Country.new({
   "visited" => false
   })
 
-country3
+country3 = Country.new({
+  "name" => "Italy"
+  "visited" => true
+  })
+
+country4 = Country.new({
+  "name" => "Germany"
+  "visited" => false
+  })
