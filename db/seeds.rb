@@ -8,6 +8,16 @@ city2 = City.new({
   "visited" => false
   })
 
+city3 = City.new({
+  "name" => "Rome",
+  "visited" => true
+  })
+
+city4 = City.new({
+  "name" => "Berlin"
+  "visited" => false
+  })
+
 country1 = Country.new({
   "name" => "England",
   "visited" => true
@@ -17,3 +27,5 @@ country2 = Country.new({
   "name" => "France",
   "visited" => false
   })
+
+country3
