@@ -1,6 +1,7 @@
 require_relative('../models/city.rb')
 require_relative('../models/country.rb')
 
+City.delete_all()
 Country.delete_all()
 
 country1 = Country.new({
