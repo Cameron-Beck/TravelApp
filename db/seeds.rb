@@ -1,3 +1,7 @@
+require_relative('../models/city.rb')
+require_relative('../models/country.rb')
+
+
 city1 = City.new({
   "name" => "London",
   "visited" => true
@@ -14,7 +18,7 @@ city3 = City.new({
   })
 
 city4 = City.new({
-  "name" => "Berlin"
+  "name" => "Berlin",
   "visited" => false
   })
 
@@ -29,11 +33,21 @@ country2 = Country.new({
   })
 
 country3 = Country.new({
-  "name" => "Italy"
+  "name" => "Italy",
   "visited" => true
   })
 
 country4 = Country.new({
-  "name" => "Germany"
+  "name" => "Germany",
   "visited" => false
   })
+
+city1.save()
+city2.save()
+city3.save()
+city4.save()
+
+country1.save()
+country2.save()
+country3.save()
+country4.save()

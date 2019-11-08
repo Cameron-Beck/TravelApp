@@ -1,8 +1,8 @@
 class Country
 
-    attr_reader(:name, :visited, :id)
+    attr_reader :name, :visited, :id
 
-    def initalize(options)
+    def initialize(options)
       @name = options['name']
       @visited = options['visited']
       @id = options['id'].to_i
