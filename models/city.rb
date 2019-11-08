@@ -15,7 +15,7 @@ class City
     sql = "INSERT INTO city
     (
       name ,
-      visited,
+      visited
     )
     VALUES
     (
@@ -26,5 +26,5 @@ class City
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
-  
+
 end
