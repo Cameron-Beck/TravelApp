@@ -7,6 +7,7 @@ CREATE TABLE country (
   visited BOOLEAN
 );
 
+
 CREATE TABLE city (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),

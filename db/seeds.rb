@@ -1,53 +1,56 @@
 require_relative('../models/city.rb')
 require_relative('../models/country.rb')
 
-
-city1 = City.new({
-  "name" => "London",
-  "visited" => true
-  })
-
-city2 = City.new({
-  "name" => "Paris",
-  "visited" => false
-  })
-
-city3 = City.new({
-  "name" => "Rome",
-  "visited" => true
-  })
-
-city4 = City.new({
-  "name" => "Berlin",
-  "visited" => false
-  })
+Country.delete_all()
 
 country1 = Country.new({
   "name" => "England",
   "visited" => true
   })
+  country1.save()
 
 country2 = Country.new({
   "name" => "France",
   "visited" => false
   })
+  country2.save()
 
 country3 = Country.new({
   "name" => "Italy",
   "visited" => true
   })
+  country3.save()
 
 country4 = Country.new({
   "name" => "Germany",
   "visited" => false
   })
+  country4.save()
 
-city1.save()
-city2.save()
-city3.save()
-city4.save()
+city1 = City.new({
+  "name" => "London",
+  "visited" => true,
+  'country_id' => country1.id
+  })
+  city1.save()
 
-country1.save()
-country2.save()
-country3.save()
-country4.save()
+city2 = City.new({
+  "name" => "Paris",
+  "visited" => false,
+  'country_id' => country2.id
+  })
+  city2.save()
+
+city3 = City.new({
+  "name" => "Rome",
+  "visited" => true,
+  'country_id' => country3.id
+  })
+  city3.save()
+
+city4 = City.new({
+  "name" => "Berlin",
+  "visited" => false,
+  'country_id' => country4.id
+  })
+  city4.save()

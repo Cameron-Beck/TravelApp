@@ -17,14 +17,15 @@ class City
     sql = "INSERT INTO city
     (
       name ,
-      visited
+      visited,
+      country_id
     )
     VALUES
     (
-      $1, $2
+      $1, $2, $3
     )
     RETURNING id"
-    values = [@name, @visited]
+    values = [@name, @visited, @country_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
