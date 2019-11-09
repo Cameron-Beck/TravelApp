@@ -9,3 +9,9 @@ end
 get '/bucket_list_countries' do
   erb( :bucket_list_countries)
 end
+
+get '/city/:id' do
+  @country = Country.all
+  @city = City.find(params['id'])
+  erb(:show)
+end

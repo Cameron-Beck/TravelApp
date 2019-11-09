@@ -1,7 +1,9 @@
-<h2><%= @country.name %></h2>
+<div id="student-wrapper">
+  <% @city.each do |city| %>
 
-<p>House: <%= @student.house.name.capitalize %></p>
-<p>Age: <%= @student.age %></p>
+  <div>
+    <h3><a href="/city/"><%= city.name %></a></h3>
+  </div>
 
-<a href="/students/<%= @student.id %>/edit">Edit</a>
-<form action="/students/<%= @student.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+  <% end %>
+</div>

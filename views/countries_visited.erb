@@ -2,11 +2,11 @@
 
 <a href="/cities_visited">cities visisted</a>
 
-<div id="student-wrapper">
+<div>
   <% @country.each do |country| %>
 
-  <div class="student">
-    <h3><a href="/students/<%= country.id %>"><%= country.name %></a></h3>
+  <div>
+    <h3><a href="/city/<%= country.id %>"><%= country.name %></a></h3>
   </div>
 
   <% end %>

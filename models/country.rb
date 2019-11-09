@@ -47,8 +47,8 @@ class Country
     return country_data.map { |country| Country.new(country) }
   end
 
-  def self.all()
-    sql = "SELECT * FROM country"
+  def self.all_bucket_list()
+    sql = "SELECT * FROM country WHERE visited = true"
     country_data = SqlRunner.run(sql)
     countries = map_items(country_data)
     return countries

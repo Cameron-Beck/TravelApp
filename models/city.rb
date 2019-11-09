@@ -50,8 +50,12 @@ class City
     WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first
-    city = Country.new(result)
+    city = City.new(result)
     return city
+  end
+
+  def self.map_items(city_data)
+    return city_data.map { |city| City.new(city) }
   end
 
 end
