@@ -43,7 +43,7 @@ class Country
   SqlRunner.run(sql, values)
   end
 
-  def map_items(country_data)
+  def self.map_items(country_data)
     return country_data.map { |country| Country.new(country) }
   end
 
