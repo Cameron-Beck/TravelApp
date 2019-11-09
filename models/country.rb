@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner.rb')
+
 class Country
 
   attr_reader :name, :visited, :id
@@ -20,6 +22,15 @@ class Country
     @id = results.first()['id'].to_i
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM country
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    country = Country.new(result)
+    return country
+  end
+
   def self.delete_all()
     sql = "DELETE FROM country"
     SqlRunner.run( sql )
@@ -30,6 +41,10 @@ class Country
   WHERE id = $1"
   values = [@id]
   SqlRunner.run(sql, values)
+  end
+
+  def map_items(country_data)
+    return country_data.map { |country| Country.new(country) }
   end
 
   def self.all()

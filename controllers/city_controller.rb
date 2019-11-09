@@ -1,3 +1,5 @@
+also_reload( '../models/*' )
+
 get '/cities_visited' do
   erb( :cities_visited )
 end
