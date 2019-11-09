@@ -54,6 +54,13 @@ class City
     return city
   end
 
+  def self.cities_by_country()
+    sql = "SELECT * FROM city WHERE id = country_id"
+    city_data = SqlRunner.run(sql)
+    cities = map_items(city_data)
+    return cities
+  end
+
   def self.map_items(city_data)
     return city_data.map { |city| City.new(city) }
   end
