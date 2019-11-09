@@ -1,3 +1,13 @@
 <h1>bucket list countries</h1>
 
 <a href="/bucket_list_cities">bucket list cities</a>
+
+<div>
+  <% @country.each do |country| %>
+
+  <div>
+    <h3><a href="/city/<%= country.id %>"><%= country.name %></a></h3>
+  </div>
+
+  <% end %>
+</div>

@@ -54,4 +54,11 @@ class Country
     return countries
   end
 
+  def self.all_countries_visited()
+    sql = "SELECT * FROM country WHERE visited = false"
+    country_data = SqlRunner.run(sql)
+    countries = map_items(country_data)
+    return countries
+  end
+
 end

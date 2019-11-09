@@ -7,6 +7,7 @@ get '/countries_visited' do
 end
 
 get '/bucket_list_countries' do
+  @country = Country.all_countries_visited
   erb( :bucket_list_countries)
 end
 
