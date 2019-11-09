@@ -1,10 +1,10 @@
 <h1>Cities Visited</h1>
 
 <div>
-  <% @cities.each do |country| %>
+  <% @cities.each do |city| %>
 
   <div>
-    <h3><a href="/city/<%= country.id %>"><%= country.name %></a></h3>
+    <h3><a href="/city/<%= city.id %>"><%= city.name %></a></h3>
   </div>
 
   <% end %>

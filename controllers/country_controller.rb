@@ -3,6 +3,7 @@ also_reload( '../models/*' )
 
 get '/countries_visited' do
   @country = Country.all_bucket_list
+  @cities = City.all
   erb( :countries_visited )
 end
 

@@ -8,8 +8,7 @@ get '/bucket_list_cities' do
 end
 
 get '/city/:id' do
-  @city2 = City.all
   @cities = City.cities_by_country
-  @city = City.find(params['id'])
+  @City = City.find(params['id'])
   erb(:show)
 end
