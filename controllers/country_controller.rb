@@ -34,6 +34,12 @@ get '/countries_visited/:id/edit_country' do
   erb(:edit_country)
 end
 
+post '/country/:id' do
+  student = Student.new(params)
+  student.update
+  redirect to "/students/#{params['id']}"
+end
+
 post '/add_country_to_bucket_list' do
   Country.new(params).save
   redirect to '/bucket_list_countries'

@@ -1,1 +1,14 @@
 <h1>edit country</h1>
+<form method="POST" action="/country/<%= @country.id %>">
+  <div>
+    <div>
+      <label for="name">name:</label>
+      <input type="text" name="name" id="name" value="<%= @country.name %>"/>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Enrol Student"/>
+    </div>
+
+  </div>
+</form>
