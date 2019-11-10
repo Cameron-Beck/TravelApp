@@ -25,6 +25,15 @@ post '/add_country_to_visited' do
   redirect to '/countries_visited'
 end
 
+get '/add_country_to_bucket_list' do
+  erb(:add_country_to_bucket_list)
+end
+
+post '/add_country_to_bucket_list' do
+  Country.new(params).save
+  redirect to '/bucket_list_countries'
+end
+
 get '/city/:id' do
   @country = Country.all
   @city = City.find(params['id'])
@@ -32,6 +41,12 @@ get '/city/:id' do
 end
 
 post '/countries_visited/:id/delete' do
+  country = Country.find(params['id'])
+  country.delete
+  redirect to '/countries_visited'
+end
+
+post '/bucket_list_countries/:id/delete' do
   country = Country.find(params['id'])
   country.delete
   redirect to '/bucket_list_countries'

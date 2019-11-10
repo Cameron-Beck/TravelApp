@@ -37,8 +37,11 @@ class Country
   end
 
   def delete()
-  sql = "DELETE FROM country
-  WHERE id = $1"
+  sql = "DELETE FROM city
+  WHERE country_id = $1
+  DELETE FROM country
+  WHERE id = $1
+  "
   values = [@id]
   SqlRunner.run(sql, values)
   end
