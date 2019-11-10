@@ -4,7 +4,7 @@ class City
 
   attr_reader :name, :visited, :id, :country_id
 
-  def initialize( options )
+  def initialize(options)
     @id = options['id'].to_i
     @country_id = options['country_id'].to_i
     @name = options['name']
@@ -55,7 +55,7 @@ class City
   end
 
   def self.cities_by_country()
-    sql = "SELECT * FROM city WHERE id = country_id"
+    sql = "SELECT * FROM city"
     city_data = SqlRunner.run(sql)
     cities = map_items(city_data)
     return cities
