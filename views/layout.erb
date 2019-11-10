@@ -1,13 +1,25 @@
 <html>
 <head>
   <link rel="stylesheet" href="/country-style.css">
+  <link rel="stylesheet" href="/nav-style.css">
 </head>
 <body>
-  <nav>
-    <a href='/'>Home</a><br>
-    <a href='/bucket_list_countries'>bucket_list_countries</a><br>
-    <a href='/countries_visited'>countries visited</a><br>
-  </nav>
+  <div class="nav">
+  <div class="nav-header">
+    <div class="nav-title">
+      Witty Name
+    </div>
+  </div>
+
+
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/countries_visited">Countries Visited</a>
+    <a href="">Cities Visited</a>
+    <a href="/bucket_list_countries">Bucket List Countries</a>
+    <a href="/bucket_list_cities">Bucket List Cities</a>
+  </div>
+</div>
   <%= yield %>
 
 </body>
