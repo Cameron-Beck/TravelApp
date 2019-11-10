@@ -23,7 +23,7 @@ post '/add_country_to_visited' do
   Country.new(params).save
   redirect to '/countries_visited'
 end
-/
+
 get '/city/:id' do
   @country = Country.all
   @city = City.find(params['id'])
