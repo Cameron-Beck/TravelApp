@@ -1,0 +1,13 @@
+.country-container{
+  background-color: pink;
+  width: 20%;
+  height: 15em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.countries-container{
+  display: flex;
+}
