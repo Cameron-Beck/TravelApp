@@ -2,7 +2,7 @@ require_relative('../db/sql_runner.rb')
 
 class Country
 
-  attr_reader :name, :visited, :id
+  attr_reader :name, :visited, :description, :id
 
   def initialize(options)
     @name = options['name']
