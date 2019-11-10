@@ -54,6 +54,21 @@ class Country
     return countries
   end
 
+  def update()
+  sql = "UPDATE country
+  SET
+  (
+    name,
+  ) =
+  (
+    $1
+  )
+  WHERE id = $2"
+  values = [@first_name, @id]
+  SqlRunner.run(sql, values)
+end
+
+
   def self.all_bucket_list()
     sql = "SELECT * FROM country WHERE visited = true"
     country_data = SqlRunner.run(sql)
