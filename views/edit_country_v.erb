@@ -1,0 +1,21 @@
+<h1>edit country</h1>
+<form method="POST" action="/country_v/<%= @country.id %>">
+  <div>
+    <div>
+      <label for="name">name:</label>
+      <input type="text" name="name" id="name" value="<%= @country.name %>"/>
+    </div>
+    <div>
+
+      <div>
+        <label for="visited_select">visited before?:</label>
+        <select name="visited" id="visited_select">
+            <option value= 'yes'>yes</option>
+            <option value= 'yes'>yes</option>
+        </select>
+      </div>
+
+      <input type="submit" value="save changes"/>
+    </div>
+  </div>
+</form>
