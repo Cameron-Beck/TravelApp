@@ -6,25 +6,29 @@ Country.delete_all()
 
 country1 = Country.new({
   "name" => "England",
-  "visited" => true
+  "visited" => true,
+  "description" => "A misserable, seemingly post apocalyptic hellscape"
   })
   country1.save()
 
 country2 = Country.new({
   "name" => "France",
-  "visited" => false
+  "visited" => false,
+  "description" => "A misserable, seemingly post apocalyptic hellscape"
   })
   country2.save()
 
 country3 = Country.new({
   "name" => "Italy",
-  "visited" => true
+  "visited" => true,
+  "description" => "A misserable, seemingly post apocalyptic hellscape"
   })
   country3.save()
 
 country4 = Country.new({
   "name" => "Germany",
-  "visited" => false
+  "visited" => false,
+  "description" => "A misserable, seemingly post apocalyptic hellscape"
   })
   country4.save()
 
