@@ -29,6 +29,11 @@ get '/add_country_to_bucket_list' do
   erb(:add_country_to_bucket_list)
 end
 
+get '/countries_visited/:id/edit_country' do
+  @country = Country.find(params['id'])
+  erb(:edit_country)
+end
+
 post '/add_country_to_bucket_list' do
   Country.new(params).save
   redirect to '/bucket_list_countries'
