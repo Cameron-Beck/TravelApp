@@ -58,11 +58,26 @@ class Country
 
   def update()
   sql = "UPDATE country
-  SET name = $1
-  WHERE id = $2"
-  values = [@name, @id]
+  SET
+  (
+    name,
+    description
+  ) =
+  (
+    $1, $2
+  )
+  WHERE id = $3"
+  values = [@name, @description, @id]
   SqlRunner.run(sql, values)
 end
+# single value update might need later
+#   def update()
+#   sql = "UPDATE country
+#   SET name = $1
+#   WHERE id = $2"
+#   values = [@name, @id]
+#   SqlRunner.run(sql, values)
+# end
 
 
   def self.all_bucket_list()

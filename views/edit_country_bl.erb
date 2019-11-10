@@ -5,7 +5,11 @@
       <label for="name">name:</label>
       <input type="text" name="name" id="name" value="<%= @country.name %>"/>
     </div>
-    <div>
+
+      <div>
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description">
+      </div>
 
       <div>
         <label for="visited_select">visited before?:</label>
@@ -17,5 +21,4 @@
 
       <input type="submit" value="save changes"/>
     </div>
-  </div>
 </form>
