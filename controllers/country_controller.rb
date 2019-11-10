@@ -1,4 +1,4 @@
-require_relative('../models/country')
+require_relative('../models/city')
 require_relative('../models/country')
 also_reload( '../models/*' )
 
