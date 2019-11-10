@@ -9,6 +9,6 @@ end
 
 get '/city/:id' do
   @cities = City.cities_by_country
-  @City = City.find(params['id'])
+  # @City = City.find(params['id'])
   erb(:show)
 end
