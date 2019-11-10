@@ -2,11 +2,6 @@ require_relative('../models/country')
 require_relative('../models/country')
 also_reload( '../models/*' )
 
-
-get '/' do
-  erb(:home)
-end
-
 get '/countries_visited' do
   @country = Country.all_bucket_list
   erb(:countries_visited )
@@ -36,7 +31,7 @@ get '/city/:id' do
   erb(:show)
 end
 
-post '/students/:id/delete' do
+post '/countries_visited/:id/delete' do
   country = Country.find(params['id'])
   country.delete
   redirect to '/bucket_list_countries'

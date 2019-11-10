@@ -1,0 +1,9 @@
+<div>
+  <% @cities.each do |country| %>
+
+  <div>
+    <h3><a href="/city/<%= city.id %>"><%= city.name %></a></h3>
+  </div>
+  <form action="/countries_visited/<%= country.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+  <% end %>
+</div>
