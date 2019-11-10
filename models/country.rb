@@ -58,7 +58,7 @@ class Country
   sql = "UPDATE country
   SET name = $1
   WHERE id = $2"
-  values = [@first_name, @id]
+  values = [@name, @id]
   SqlRunner.run(sql, values)
 end
 
