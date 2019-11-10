@@ -56,13 +56,7 @@ class Country
 
   def update()
   sql = "UPDATE country
-  SET
-  (
-    name,
-  ) =
-  (
-    $1
-  )
+  SET name = $1
   WHERE id = $2"
   values = [@first_name, @id]
   SqlRunner.run(sql, values)

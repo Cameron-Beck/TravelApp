@@ -35,9 +35,9 @@ get '/countries_visited/:id/edit_country' do
 end
 
 post '/country/:id' do
-  student = Student.new(params)
-  student.update
-  redirect to "/students/#{params['id']}"
+  country = Country.new(params)
+  country.update
+  redirect to "/countries_visited"
 end
 
 post '/add_country_to_bucket_list' do
