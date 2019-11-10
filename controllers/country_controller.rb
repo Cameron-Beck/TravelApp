@@ -11,8 +11,12 @@ get '/bucket_list_countries' do
   erb(:bucket_list_countries)
 end
 
-get '/add_country' do
+get '/add_country_to_visited' do
   erb(:add_country_to_visited)
+end
+
+get '/add_new_country' do
+  erb(:add_new_country)
 end
 
 post '/add_country_to_visited' do
