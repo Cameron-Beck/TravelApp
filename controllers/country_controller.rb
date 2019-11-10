@@ -3,16 +3,21 @@ also_reload( '../models/*' )
 
 get '/countries_visited' do
   @country = Country.all_bucket_list
-  erb( :countries_visited )
+  erb(:countries_visited )
 end
 
 get '/bucket_list_countries' do
   @country = Country.all_countries_visited
-  erb( :bucket_list_countries)
+  erb(:bucket_list_countries)
 end
 
 get '/add_country' do
   erb(:add_country_to_visited)
+end
+
+post '/add_country_to_visited' do
+  Country.new(params).save
+  redirect to '/countries_visited'
 end
 
 get '/city/:id' do
