@@ -4,7 +4,7 @@
   <% @country.each do |country| %>
 
   <div>
-    <h3><a href="/city/<%= country.id %>"><%= country.name %></a></h3>
+    <h3><a href="/city/<%= country.id %>"><%= country.name.capitalize %></a></h3>
     <p><%= country.description %></p>
   </div>
   <form action="/bucket_list_countries/<%= country.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
