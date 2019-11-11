@@ -64,6 +64,12 @@ get '/cities_visited/:id' do
   erb(:cities_visited)
 end
 
+get '/bucket_list_cities/:id' do
+  @country = Country.find(params['id'])
+  @cities = @country.cities()
+  erb(:bucket_list_cities)
+end
+
 post '/countries_visited/:id/delete' do
   country = Country.find(params['id'])
   country.delete

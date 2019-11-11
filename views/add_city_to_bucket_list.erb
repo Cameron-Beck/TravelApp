@@ -1,0 +1,21 @@
+<h1>Add new country to bucket list</h1>
+<form method="POST" action="/add_city_to_bucket_list">
+  <div class="form-wrapper">
+
+    <div>
+      <label for="name">City Name</label>
+      <input type="text" name="name" id="name"/>
+    </div>
+
+    <div>
+      <label for="visited_select">visited before?:</label>
+      <select name="visited" id="visited_select">
+          <option value= 'no'>no</option>
+      </select>
+    </div>
+
+    <div>
+      <input type="submit" value="Add City"/>
+    </div>
+  </div>
+</form>
