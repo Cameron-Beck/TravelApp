@@ -9,6 +9,11 @@ get '/bucket_list_cities' do
   erb( :bucket_list_cities )
 end
 
+get '/all_cities' do
+  @city = City.all
+  erb(:all_cities)
+end
+
 get '/add_city_to_bucket_list' do
   erb(:add_city_to_bucket_list)
 end

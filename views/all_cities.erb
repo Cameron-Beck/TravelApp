@@ -1,0 +1,11 @@
+<div class="countries-head">
+  <h1>all cities</h1>
+</div>
+<div class="countries-container">
+  <% @city.each do |city| %>
+
+  <div class="country-container">
+    <h3><a class="country-title" href="/bucket_list_cities/<%= city.id %>"><%= city.name.capitalize %></a></h3>
+  </div>
+  <% end %>
+</div>
