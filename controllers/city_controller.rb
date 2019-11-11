@@ -11,6 +11,10 @@ get '/add_city_to_bucket_list' do
   erb(:add_city_to_bucket_list)
 end
 
+get '/add_city_to_visited' do
+  erb(:add_city_to_visited)
+end
+
 post '/add_city_to_bucket_list' do
   City.new(params).save
   redirect to '/cities_visited'
