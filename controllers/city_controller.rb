@@ -25,6 +25,7 @@ end
 
 get '/add_city_to_visited' do
   @city = City.find(params['id'])
+  @cities = City.all
   erb(:add_city_to_visited)
 end
 

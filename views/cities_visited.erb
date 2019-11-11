@@ -1,6 +1,14 @@
-<h1>cities visited</h1>
-<% for city in @cities %>
-  <p><%= city['name'] %></p>
-<% end %>
+<h1>cities visited in <%= @country.name %></h1>
+
+<div class="countries-container">
+  <% @cities.each do |city| %>
+
+  <div class = "country-container">
+    <h3><a <%= city['id'] %>"><%= city['name']%></a></h3>
+    <form action="/cities_visited/<%= city['id'] %>/delete" method="POST"><input type="submit" value="Delete"></form>
+    <form action="/cities_visited/<%= city['id'] %>/edit_city_visited"><input type="submit" value="edit"></form>
+  </div>
+  <% end %>
+</div>
 
 <a href="/add_city_to_visited">add new city</a>
