@@ -15,6 +15,11 @@ get '/bucket_list_countries' do
   erb(:bucket_list_countries)
 end
 
+get '/all_countries' do
+  @country = Country.all
+  erb(:all_countries)
+end
+
 get '/add_country_to_visited' do
   erb(:add_country_to_visited)
 end
