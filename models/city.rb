@@ -14,7 +14,7 @@ class City
 
 
   def save()
-    sql = "INSERT INTO city(
+    sql = "INSERT INTO city (
       name,
       visited,
       country_id)
@@ -55,7 +55,7 @@ class City
   end
 
   def self.cities_by_country()
-    sql = "SELECT * FROM city"
+    sql = "SELECT * FROM city @ID"
     city_data = SqlRunner.run(sql)
     cities = map_items(city_data)
     return cities
