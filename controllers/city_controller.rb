@@ -39,3 +39,9 @@ post '/cities_visited/:id/delete' do
   city.delete
   redirect to '/countries_visited'
 end
+
+post '/bucket_list_cities/:id/delete' do
+  city = City.find(params['id'])
+  city.delete
+  redirect to '/bucket_list_countries'
+end
