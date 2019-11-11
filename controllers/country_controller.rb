@@ -1,3 +1,4 @@
+require('pry')
 require_relative('../models/city')
 require_relative('../models/country')
 also_reload( '../models/*' )
@@ -56,10 +57,11 @@ post '/add_country_to_bucket_list' do
   redirect to '/bucket_list_countries'
 end
 
-get '/city/:id' do
-  @country = Country.all
-  @city = City.find(params['id'])
-  erb(:show)
+
+get '/cities_visited/:id' do
+  @country = Country.find(params['id'])
+  @cities = @country.cities()
+  erb(:cities_visited)
 end
 
 post '/countries_visited/:id/delete' do

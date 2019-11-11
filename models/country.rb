@@ -1,5 +1,5 @@
 require_relative('../db/sql_runner.rb')
-
+require_relative('./city.rb')
 class Country
 
   attr_reader :name, :visited, :description, :id
@@ -92,6 +92,14 @@ end
     country_data = SqlRunner.run(sql)
     countries = map_items(country_data)
     return countries
+  end
+
+  def cities()
+    sql = "SELECT * FROM city WHERE country_id = $1"
+    values = [@id]
+    city_data = SqlRunner.run(sql, values)
+    cities = city_data.map{|city| City.new(city)}
+    return city_data
   end
 
 end
