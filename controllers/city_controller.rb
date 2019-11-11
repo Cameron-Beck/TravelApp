@@ -33,3 +33,9 @@ post '/add_city_to_visited' do
   City.new(params).save
   redirect to '/cities_visited'
 end
+
+post '/cities_visited/:id/delete' do
+  city = City.find(params['id'])
+  city.delete
+  redirect to '/countries_visited'
+end
